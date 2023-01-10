@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(176, 85, 176), rgb(121, 196, 121));
+    margin: 0px;
+    padding: 0px;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid white;
+    font-size: 2rem;
+    outline: none;
+}
+
+button:hover {
+    background-color: #a9a9a9;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #cbcbcb;
+    cursor: pointer;
+}
+
+.span-two {
+    background-color: rgba(180, 0, 180, 0.75);
+    color: #adf802;
+    grid-column: span 2;
+}
+
+.span-two:hover {
+    background-color: rgba(120, 0, 120, 0.75);
+}
+
+.span-two:active {
+    background-color: rgba(150, 0, 150, 0.75);
+}
+
+.output {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.75);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .prev-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.0rem;
+}
+
+.output .curr-operand {
+    color: white;
+    font-size: 2.0rem;
+}
