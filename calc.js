@@ -41,6 +41,9 @@ class Calculator {
         if (num === "." && this.#currOperand.includes("."))
             return;
 
+        if (num === "0" && this.#currOperand === "0")
+            return;
+
         this.#currOperand += num;
     }
 
